@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>hw</title>
-        <!--meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"-->
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <meta charset='utf-8'>
         <style>
             html {
@@ -15,16 +15,29 @@
                 min-width : 500px ;
                 margin : 120px auto ;
                 background-color : rgba(255 , 255, 255 , 0.4) ;
+                text-align : center ;
+                padding-bottom : 40px ;
             }
             img {
-                position : absolute ;
-                left : 28vw ;
-                top : 2vw ;
+                position : relative ;
                 width : 30vw ;
+                min-width : 300px ;
+                top : 30px ;
+                display : inline-block ;
             }
             p {
                 padding : 15px ;
             }
+
+            #content {
+                background-color : rgba(255 , 255, 255 , 0.6) ;
+                height : 280px ;
+                width : 300px ;
+                display : inline-block ;
+                margin-bottom : 30px ;
+                margin-right : 15px;
+            }
+
 
         </style>
     </head>
@@ -32,16 +45,18 @@
         <div id='container'>
 
             <h1>introduction</h1>
-            <h3>my github page</h3>
-            <p>
-                林泓鈞
-            </p>
-            <p>
-                興趣:打羽球、看劇
-            </p>
-            <p>
-                生日:86/2/19
-            </p>
+            <div id='content'>
+                <h3>my github page</h3>
+                <p>
+                    林泓鈞
+                </p>
+                <p>
+                    興趣:打羽球、看劇
+                </p>
+                <p>
+                    生日:86/2/19
+                </p>
+            </div>
             <img src='badminton.jpg'>
         </div>
 
