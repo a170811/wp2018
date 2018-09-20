@@ -1,0 +1,167 @@
+* {
+    box-sizing : border-box ;
+    font-family: 'Caveat' ;
+}
+
+/* class */
+
+.c_border {
+    border : 0 solid white ;
+    border-radius : 10px ;
+}
+
+.block {
+    position : relative ;
+    width : 90% ;
+    margin : 3vh auto ;
+}
+
+.icon {
+    display : inline-block ;
+    width : 6vh ;
+    height : 6vh ;
+    z-index : 1 ;
+}
+
+.centerY {
+    position : absolute ;
+    top : 50% ;
+    transform : translateY(-50%) ;
+}
+
+/* style */
+
+#container {
+    position : relative ;
+    height : 95vh ;
+    width : 60vh ;
+    /*background : #f7f8f9 ;*/
+    background : #f4f4f4 ;
+    padding-top : 5px ;
+    border : 1px solid gray ;
+}
+
+
+#title {
+    background : white ;
+    padding : 0 10px 0 10px ;
+    box-shadow: 0 10px 40px rgba(152, 124, 201 , 0.5);
+}
+
+#title > span {
+    position : relative ;
+    display : block ;
+    padding : 3vh 0 3vh 3vh ;
+    text-align : left ;
+}
+
+#title > span > span:last-child {
+    margin-left : 7vh ;
+}
+
+#title > span:first-of-type {
+    border-bottom : 1px solid rgba( 229 , 230 , 232 , 0.5 ) ;
+    box-shadow: 0 15px 40px -20px rgba(152, 124, 201 , 0.8);
+}
+
+
+#refresh{
+    right : 5vh ; 
+    background-image : url('./src/refresh.png') ;
+    background-size : cover ;
+    background-position : center ;
+}
+
+#head {
+    background-image : url('./src/head.png') ;
+    background-size : cover ;
+    background-position : center ;
+}
+
+#badminton {
+    background-image : url('./src/badminton.png') ;
+    background-size : cover ;
+    background-position : center ;
+}
+
+
+
+#gallery {
+    display : grid ;
+    grid-template-columns : auto auto ;
+    grid-gap : 10px ;
+    overflow : scroll ;
+	height : 55vh ;
+    padding-bottom:2vh ;
+}
+
+#gallery > div {
+    position : relative ;
+    padding : 15vh 0 ;
+    overflow : hidden ;
+    box-shadow: 0 15px 40px -10px rgba(152, 124, 201 , 0.4);
+}
+
+#gallery > div > div:first-child {
+    position : absolute ;
+    width : 100% ;
+    height : 20vh ;
+    top : 0 ;
+}
+
+#gallery > div > div:last-child {
+    position : absolute ;
+    width : 100% ;
+    height : 10vh ;
+    top : 20vh ;
+    background : white ;
+}
+
+.text {
+    margin : 0 0 0 2vh ;
+}
+
+.text > span {
+    color : gray ;
+}
+
+::-webkit-scrollbar {
+    width : 5px ;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+#burger {
+    background-image : url('./src/burger.JPG') ;
+    background-size : cover ;
+}
+#chocolate {
+    background-image : url('./src/chocolate.JPG') ;
+    background-size : cover ;
+}
+#fitness {
+    background-image : url('./src/fitness.JPG') ;
+    background-size : cover ;
+}
+#pudding {
+    background-image : url('./src/pudding.JPG') ;
+    background-size : cover ;
+}
+#beach {
+    background-image : url('./src/beach.JPG') ;
+    background-size : cover ;
+}
+#cat {
+    background-image : url('./src/cat.JPG') ;
+    background-size : cover ;
+}
+#pizza {
+    background-image : url('./src/pizza.jpg') ;
+    background-size : cover ;
+}
+#rabbit {
+    background-image : url('./src/rabbit.JPG') ;
+    background-size : cover ;
+}
