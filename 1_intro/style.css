@@ -175,7 +175,8 @@
 #show_img {
     position : absolute ;
     width : 100% ;
-    visibility : hidden ;
+    /*visibility : hidden ;*/
+    display:none ;
 }
 
 #show_img > div:first-child{

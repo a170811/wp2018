@@ -11,11 +11,11 @@ function move_img_block( status ) {
     var block = document.getElementById('show_img') ;
     if(status==1) {
         block.classList.add('move_img_block') ;
-        block.style.visibility = 'visible' ;
+        block.style.display = 'block' ;
     }
     else {
         block.classList.remove('move_img_block') ;    
-        block.style.visibility = 'hidden' ;
+        block.style.display = 'none' ;
     }
 }
 
