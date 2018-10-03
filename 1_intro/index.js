@@ -1,4 +1,58 @@
+function content(status){
+    var title = $('#title') ;
+    var gallery = $('#gallery') ;
+    var move = 20 ;
+    if(status==1) {
+        title.animate({margin:`-=${move}px auto +=${move}px auto`, opacity:'0'}, 800) ;
+        gallery.animate({marginTop:`${2*move}px`,opacity:'0'}, 800) ;
+    }
+    else {
+        title.animate({marginTop:'0px', display:'block'}, 300) ;
+        gallery.animate({paddingTop:'0px', display:'block'}, 300) ;
+    }
+}
 
+
+function img_enlarge(status, element){
+    var offset = $('#container').offset();
+    var j_ele = $(element);
+    if(status==1) {
+        $('#info_container').css({ 'display':'block' });
+        var id = element.getAttribute('id');
+        var div = $(`<div id='show_img' class='c_border' style='
+            position:absolute;
+            top:0px;
+            left:${j_ele.offset().left-offset.left}px;
+            width:${j_ele.width()}px;
+            height:${j_ele.height()}px;
+            '></div>`).appendTo('#info_container'); 
+        div.css({'background-image':`url('./src/${id}.JPG')`, 'background-size':'cover' });
+        var info_container = $('#info_container')
+        info_container.css({ 'top':`${j_ele.offset().top-offset.top}px` });
+
+
+        var info = $('#info') ;
+        $('#arrow').appendTo('#show_img') ;
+        $('#info_title').html(id) ;
+
+        //pic and container
+        info_container.animate({ top:'0px' }, 500 , 'easeInOutCubic');
+        div.animate({top:'0px', width:'100%', left:'0px', height:'30vh'}, 500 ,'easeInOutCubic');
+        
+        //info block
+        info.animate({top:'25vh'}, 400 , 'easeInOutQuart');
+    }
+}
+
+
+$(document).ready(()=>{
+    $('.pic').click(function(){
+        content(1);
+        img_enlarge(1, this);
+    });
+});
+
+/*
 //will delete
 function Cursor_pos() {
     var x = event.clientX ;
@@ -76,10 +130,6 @@ function fadeOut( status ) {
 pic = document.getElementsByClassName('pic') ;
 for(let i of pic) {
     i.onclick = ( )=> { 
-        move_img_block( 1 ) ;
-        show_pic( 1, i , show_info ) ;
-        fadeOut(1) ;
-        show_info( 1, i.getAttribute('id') ) ;
     } ;
 }
 arrow = document.getElementById('arrow') ;
@@ -89,3 +139,4 @@ arrow.onclick = ()=>{
     move_img_block(2) ;
     show_pic( 2, arrow , show_info ) ;
 }
+*/
