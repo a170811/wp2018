@@ -175,7 +175,7 @@
 #info_container {
     position:absolute;
     width:100%;
-    height:50vh;
+    height:90vh;
     display:none;
 }
 
@@ -188,6 +188,7 @@
     height : 6vh ;
     background : rgba(255, 255, 255, 0.8) ;
     border-radius : 50% ;
+    z-index : 2 ;
 }
 
 #arrow > img {
@@ -244,70 +245,4 @@
 #info_content > div:last-child {
     text-align : center ;
     font-size : 1.8rem ;
-}
-
-/*animation*/
-
-
-@keyframes move_img_block {
-    from { top:calc(var(--top)*1px) ; height : 0 }
-    to { top:0 ; height : 100% }
-}
-
-.move_img_block {
-
-    position : absolute ;
-    animation-name : move_img_block ;
-    animation-duration : 1s ; 
-    animation-fill-mode : forwards ;
-    animation-timing-function : ease ; 
-    
-}
-
-@keyframes show_pic {
-    0% { left:calc(var(--left)*1px) ; width:calc(var(--width)*1px) ; height:calc(var(--height)/2*1px) ;}
-    100% { left :0 ; width:100% ; height:30vh; }
-}
-
-.show_pic {
-    animation-name : show_pic ;
-    animation-duration : 1.1s ; 
-    animation-fill-mode : forwards ;
-    /*animation-timing-function : cubic-bezier(0.44,0.06,1,.59) ;*/
-    animation-timing-function : ease ; 
-}
-
-@keyframes show_info {
-    
-    from { top : 65vh ; height : 0 }
-    50% { height : 65vh ; }
-    to { top : 25vh ; height : 65vh ; }
-}
-
-.show_info {
-    animation-name : show_info ;
-    animation-duration : 0.5s ;
-    animation-fill-mode : forwards ;
-    animation-timing-function : cubic-bezier(.39,1.26,1,.94) ; 
-}
-
-@keyframes fadeUp {
-    from { opacity:1 ; }
-    to { opacity:0 ; margin-top : -100px; }
-}
-@keyframes fadeDown {
-    from { opacity:1 ; }
-    to { opacity:0 ; margin-top : 200px; }
-}
-.fadeUp {
-    animation-name : fadeUp ;
-    animation-duration : 1s ; 
-    animation-fill-mode : forwards ;
-    animation-timing-function : ease ;
-}
-.fadeDown {
-    animation-name : fadeDown ;
-    animation-duration : 1s ; 
-    animation-fill-mode : forwards ;
-    animation-timing-function : ease ;
 }
